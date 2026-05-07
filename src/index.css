@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+@theme {
+  --color-brand-light: #E8E9D4;
+  --color-brand-medium: #D3CCC6;
+  --color-brand-dark: #8E8781;
+  --font-cinzel: "Cinzel", serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer utilities {
+  /* Gradiente que começa transparente e vai escurecendo para o preto */
+  .bg-hero-overlay {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.9) 100%);
+  }
+}
+
+/* ISSO É O QUE RESOLVE O SEU PROBLEMA */
+:root, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #E8E9D4;
+  -webkit-font-smoothing: antialiased;
+}
