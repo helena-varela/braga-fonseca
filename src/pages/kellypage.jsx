@@ -45,74 +45,75 @@ export default function KellyPage() {
       </section>
 
       {/* dores do cliente */}
-      <section className="bg-white py-24 px-10 md:px-20 border-y border-[#8E8781]/10">
+      <section className="bg-white py-16 md:py-24 px-6 sm:px-10 md:px-20 border-y border-[#8E8781]/10">
         <div className="max-w-6xl mx-auto">
-          <div className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="font-cinzel text-xs tracking-[0.4em] text-[#8E8781] uppercase mb-4 font-bold">
+          {/* CABEÇALHO RESPONSIVO */}
+          <div className="max-w-4xl mx-auto text-center mb-12 md:mb-20">
+            <h2 className="font-cinzel text-[10px] md:text-xs tracking-[0.4em] text-[#8E8781] uppercase mb-4 font-bold">
               Apoio Especializado em Natal
             </h2>
-            <h3 className="font-cinzel text-3xl md:text-4xl text-[#8E8781] mb-6">
+            <h3 className="font-cinzel text-2xl md:text-4xl text-[#8E8781] mb-6 leading-tight">
               Você não precisa lutar sozinho contra o INSS
             </h3>
-            <p className="font-inter text-gray-600 text-lg leading-relaxed">
+            <p className="font-inter text-gray-600 text-base md:text-lg leading-relaxed">
               Muitas pessoas em Natal e no RN têm o pedido negado por erros na
               organização dos papéis. Meu trabalho é garantir que você não perca
               o que é seu por direito.
             </p>
           </div>
 
-          {/* serviços e soluções */}
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* GRID AJUSTADA */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {[
               {
                 t: "Pedido Negado",
-                sub: "Recursos e Revisões",
+                sub: "Recursos",
                 d: "Se o INSS disse 'não', nós analisamos o motivo do erro e entramos com o recurso para reverter a decisão injusta.",
               },
               {
                 t: "Aposentadorias",
-                sub: "Planejamento Completo",
+                sub: "Planejamento",
                 d: "Cuidamos de todo o cálculo e organização do tempo de contribuição para você se aposentar com o melhor valor possível.",
               },
               {
                 t: "Auxílio Doença",
-                sub: "Segurança Imediata",
+                sub: "Incapacidade",
                 d: "Suporte para quem não pode trabalhar e precisa garantir o benefício por incapacidade com rapidez e segurança financeira.",
               },
               {
                 t: "BPC / LOAS",
-                sub: "Direito Assistencial",
+                sub: "Assistencial",
                 d: "Garantimos o benefício para idosos ou pessoas com deficiência que nunca puderam contribuir, mas precisam de amparo.",
               },
             ].map((item, i) => (
               <div
                 key={i}
-                className="group p-10 bg-[#F9F9F4] border-t-2 border-[#8E8781]/20 hover:border-[#8E8781] transition-all duration-500 shadow-sm hover:shadow-md flex flex-col gap-4"
+                className="group p-6 md:p-10 bg-[#F9F9F4] border-t-2 border-[#8E8781]/20 hover:border-[#8E8781] transition-all duration-500 shadow-sm flex flex-col gap-4"
               >
-                <div className="flex justify-between items-start">
-                  <h4 className="font-cinzel text-[#8E8781] font-bold text-xl uppercase">
+                <div className="flex flex-col sm:flex-row justify-between items-start gap-3">
+                  <h4 className="font-cinzel text-[#8E8781] font-bold text-lg md:text-xl uppercase leading-none">
                     {item.t}
                   </h4>
-                  <span className="text-[12px] font-inter font-bold text-[#8E8781]/80 uppercase tracking-widest bg-white px-3 py-1 rounded-full">
+                  <span className="text-[10px] font-inter font-bold text-[#8E8781] uppercase tracking-widest bg-white px-3 py-1 rounded-full border border-[#8E8781]/10">
                     {item.sub}
                   </span>
                 </div>
 
-                <div className="w-full h-[1px] bg-[#8E8781]/10 group-hover:bg-[#8E8781]/30 transition-all"></div>
+                <div className="w-full h-[1px] bg-[#8E8781]/10 transition-all"></div>
 
-                <p className="font-inter text-md text-gray-600 leading-relaxed">
+                <p className="font-inter text-sm md:text-md text-gray-600 leading-relaxed">
                   {item.d}
                 </p>
 
-                <div className="pt-4 flex items-center gap-2 text-[#8E8781] font-cinzel text-[11px] font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">
+                <div className="pt-4 flex items-center gap-2 text-[#8E8781] font-cinzel text-[11px] font-bold tracking-widest opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all md:translate-x-[-10px] md:group-hover:translate-x-0">
                   SOLICITAR AJUDA <span className="text-lg">→</span>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 p-8 bg-[#8E8781] text-center">
-            <p className="font-cinzel text-[#E8E9D4] text-sm tracking-[0.2em] uppercase font-bold">
+          <div className="mt-12 md:mt-16 p-6 md:p-8 bg-[#8E8781] text-center">
+            <p className="font-cinzel text-[#E8E9D4] text-xs md:text-sm tracking-[0.1em] md:tracking-[0.2em] uppercase font-bold leading-relaxed">
               Atendimento Humanizado para garantir sua dignidade e respeito.
             </p>
           </div>

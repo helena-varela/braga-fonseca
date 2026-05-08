@@ -75,30 +75,34 @@ export default function Home() {
   return (
     <div className="bg-[#D3CCC6] w-screen max-w-none m-0 p-0 font-inter text-black overflow-x-hidden">
       <section
-        className="w-full h-screen relative flex items-center px-18 md:px-29 bg-cover bg-center bg-no-repeat overflow-hidden"
+        className="w-full min-h-screen md:h-screen relative flex items-center bg-cover bg-center bg-no-repeat overflow-hidden"
         style={{
           backgroundImage: `url(${image})`,
-          borderBottomLeftRadius: "50% 10%",
-          borderBottomRightRadius: "50% 10%",
+          borderBottomLeftRadius: "50% 8px",
+          borderBottomRightRadius: "50% 8px",
         }}
       >
-        <div className="absolute inset-0 bg-hero-overlay z-0"></div>
+        <div className="absolute inset-0 bg-black/50 md:bg-hero-overlay z-0"></div>
 
-        <div className="relative z-10 w-full md:w-3/4 lg:w-2/3 space-y-9 pt-20">
-          <span className="font-cinzel tracking-[0.4em] text-xs uppercase text-brand-light/70">
-            Advocacia Estratégica & Humanizada
-          </span>
-          <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl leading-[1.1] text-brand-light">
-            {data.dor}
-          </h1>
-          <p className="font-inter text-xl md:text-2xl text-brand-light/80 max-w-2xl leading-relaxed">
-            {data.subDor}
-          </p>
+        <div className="relative z-10 w-full px-6 sm:px-10 md:px-20 lg:px-29 py-24 md:py-0 flex flex-col justify-center">
+          <div className="max-w-full md:max-w-3/4 lg:w-2/3 space-y-6 md:space-y-9">
+            <span className="font-cinzel tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-xs uppercase text-brand-light/70 block">
+              Advocacia Estratégica & Humanizada
+            </span>
 
-          <div className="flex pt-6">
-            <button className="bg-[#8E8781] text-[#E8E9D4] px-20 py-5 font-cinzel text-sm tracking-[0.3em] font-bold cursor-pointer rounded-sm">
-              FALAR COM UMA ESPECIALISTA
-            </button>
+            <h1 className="font-cinzel text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight md:leading-[1.1] text-brand-light">
+              {data.dor}
+            </h1>
+
+            <p className="font-inter text-base md:text-xl lg:text-2xl text-brand-light/90 max-w-xl leading-relaxed">
+              {data.subDor}
+            </p>
+
+            <div className="flex pt-4 md:pt-6">
+              <button className="w-full md:w-auto bg-[#8E8781] text-[#E8E9D4] px-6 md:px-20 py-4 md:py-5 font-cinzel text-xs md:text-sm tracking-[0.2em] md:tracking-[0.3em] font-bold cursor-pointer rounded-sm hover:bg-black transition-all">
+                FALAR COM UMA ESPECIALISTA
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -182,7 +186,7 @@ export default function Home() {
                 <img
                   src={cristinabraga}
                   alt="Dra. Cristina Braga"
-                  className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover object-center transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-[#8E8781]/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
@@ -221,7 +225,7 @@ export default function Home() {
                 <img
                   src={kelly}
                   alt="Dra. Kelly Fonsêca"
-                  className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover object-center transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-[#8E8781]/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
@@ -255,7 +259,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* feedbacks */}
       <section className="w-full py-20 px-10 md:px-20 bg-white text-[#8E8781]">
         <div className="max-w-5xl mx-auto">
@@ -311,7 +315,7 @@ export default function Home() {
             {reviews.map((_, i) => (
               <button
                 key={i}
-                onClick={() => setCurrent(i)} 
+                onClick={() => setCurrent(i)}
                 className={`h-[2px] transition-all duration-500 ${
                   current === i
                     ? "w-12 bg-[#8E8781]"

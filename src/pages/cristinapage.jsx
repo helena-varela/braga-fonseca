@@ -101,7 +101,15 @@ export default function CristinaPage() {
               href="https://wa.me/5584991053771"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-cinzel text-[15px] tracking-[0.1em] border border-[#8E8781] text-[#8E8781] px-12 py-4 hover:bg-[#8E8781] hover:text-white transition-all uppercase font-bold"
+              className="
+                inline-block text-center w-full md:w-auto 
+                font-cinzel text-[13px] md:text-[15px] 
+                tracking-[0.1em] md:tracking-[0.2em] 
+                border border-[#8E8781] text-[#8E8781] 
+                px-6 md:px-12 py-4 
+                hover:bg-[#8E8781] hover:text-white 
+                transition-all uppercase font-bold
+              "
             >
               Agendar Consulta em Natal
             </a>
