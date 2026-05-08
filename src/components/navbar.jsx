@@ -6,7 +6,7 @@ export default function NavBar() {
   const [view, setView] = useState("servidor");
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-10 py-6 border-b border-[#8E8781]/10 bg-[#E8E9D4]/95">
+    <nav className="fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-10 py-6 border-b-[0.5px] border-[#8E8781]/30 bg-[#E8E9D4]/95 backdrop-blur-sm">
       <div className="flex items-center">
         <Link to="/">
           <img
