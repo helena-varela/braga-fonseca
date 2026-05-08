@@ -78,8 +78,8 @@ export default function Home() {
         className="w-full min-h-screen md:h-screen relative flex items-center bg-cover bg-center bg-no-repeat overflow-hidden"
         style={{
           backgroundImage: `url(${image})`,
-          borderBottomLeftRadius: "50% 8px",
-          borderBottomRightRadius: "50% 8px",
+          borderBottomLeftRadius: "40% 8%",
+          borderBottomRightRadius: "50% 8%",
         }}
       >
         <div className="absolute inset-0 bg-black/50 md:bg-hero-overlay z-0"></div>
