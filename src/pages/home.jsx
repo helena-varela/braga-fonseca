@@ -3,6 +3,7 @@ import image from "../assets/image.png";
 import cristinabraga from "../assets/cristinabraga.png";
 import kelly from "../assets/kelly.png";
 import { Link } from "react-router-dom";
+import { MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 
 const reviews = [
   {
@@ -102,7 +103,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PILARES */}
+      {/* pilares*/}
       <section className="w-full bg-[#D3CCC6] py-24 px-10 md:px-20 border-y border-[#8E8781]/10">
         <div className="mb-16 max-w-2xl">
           <h2 className="font-cinzel text-3xl md:text-4xl text-[#8E8781] leading-tight mb-6">
@@ -111,7 +112,7 @@ export default function Home() {
           <div className="w-24 h-1 bg-[#8E8781]/30"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 shadow-2xl">
-          {/* Card 1 */}
+          {/* card 1 */}
           <div className="bg-[#cbccba] p-12 md:p-16 space-y-6 flex flex-col justify-start min-h-[450px] transition-all duration-500 hover:scale-[1.02] hover:z-10 shadow-sm">
             <span className="font-cinzel text-[20px] tracking-[0.4em] text-[#736e69] uppercase font-bold">
               01. Missão
@@ -126,7 +127,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Card 2 */}
+          {/* card 2 */}
           <div className="bg-[#8E8781] p-12 md:p-16 space-y-6 flex flex-col justify-start min-h-[450px] text-[#E8E9D4] transition-all duration-500 hover:scale-[1.02] hover:z-10 shadow-sm">
             <span className="font-cinzel text-[20px] tracking-[0.4em] uppercase font-bold">
               02. Experiência
@@ -141,7 +142,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Card 3 */}
+          {/* card 3 */}
           <div className="bg-[#cbccba] p-12 md:p-16 space-y-6 flex flex-col justify-start min-h-[450px] transition-all duration-500 hover:scale-[1.02] hover:z-10 shadow-sm">
             <span className="font-cinzel text-[20px] tracking-[0.4em] text-[#736e69] uppercase font-bold">
               03. Presença
@@ -159,7 +160,6 @@ export default function Home() {
 
       <section className="w-full py-20 px-10 md:px-20 bg-[#E8E9D4]">
         <div className="max-w-none w-full">
-          {/* CABEÇALHO DA SEÇÃO - Texto de Missão */}
           <div className="text-center max-w-4xl mx-auto mb-10 space-y-2">
             <h2 className="font-cinzel text-xs tracking-[0.4em] text-[#8E8781] uppercase">
               Excelência e Humanidade
@@ -174,22 +174,19 @@ export default function Home() {
             </p>
           </div>
 
-          {/* GRID DAS ADVOGADAS - Estilo Editorial Arqueado */}
+          {/* especialistas */}
           <div className="flex flex-wrap justify-center gap-20 md:gap-32 items-start">
-            {/* CARD: DRA. CRISTINA BRAGA */}
+            {/* card de cristina */}
             <div className="w-full md:w-[420px] flex flex-col items-center group">
-              {/* CONTAINER DO ARCO */}
               <div className="relative w-full aspect-[4/5] overflow-hidden rounded-t-full border border-[#8E8781]/20 bg-[#D3CCC6]/30 mb-5 transition-all duration-700 group-hover:border-[#8E8781] group-hover:shadow-2xl">
                 <img
                   src={cristinabraga}
                   alt="Dra. Cristina Braga"
                   className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
-                {/* Overlay suave */}
                 <div className="absolute inset-0 bg-[#8E8781]/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
 
-              {/* CONTEÚDO TEXTUAL */}
               <div className="text-center w-full flex flex-col items-center">
                 <h4 className="font-cinzel text-3xl text-[#8E8781] tracking-wider mb-2">
                   Cristina Braga
@@ -218,20 +215,17 @@ export default function Home() {
               </div>
             </div>
 
-            {/* CARD: DRA. KELLY FONSÊCA */}
+            {/* card de kelly */}
             <div className="w-full md:w-[420px] flex flex-col items-center group">
-              {/* CONTAINER DO ARCO */}
               <div className="relative w-full aspect-[4/5] overflow-hidden rounded-t-full border border-[#8E8781]/20 bg-[#D3CCC6]/30 mb-5 transition-all duration-700 group-hover:border-[#8E8781] group-hover:shadow-2xl">
                 <img
                   src={kelly}
                   alt="Dra. Kelly Fonsêca"
                   className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
-                {/* Overlay suave */}
                 <div className="absolute inset-0 bg-[#8E8781]/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
 
-              {/* CONTEÚDO TEXTUAL */}
               <div className="text-center w-full flex flex-col items-center">
                 <h4 className="font-cinzel text-3xl text-[#8E8781] tracking-wider mb-2">
                   Kelly Fonsêca
@@ -239,8 +233,6 @@ export default function Home() {
                 <p className="font-inter text-xs text-gray-400 uppercase tracking-[0.3em] mb-6 pb-4 border-b border-[#8E8781]/10 w-3/4">
                   Especialista em INSS
                 </p>
-
-                {/* Box de texto com altura mínima para alinhar os botões */}
                 <div className="min-h-[120px] flex items-center justify-center mb-8">
                   <p className="font-inter text-sm md:text-base text-gray-600 leading-relaxed px-4">
                     Dra. Kelly Fonsêca é especialista em aposentadorias e
@@ -263,94 +255,145 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* FEEDBACKS */}
-      <section className="w-full py-30 px-10 md:px-20 bg-white text-[#8E8781]">
-        <div className="max-w-6xl mx-auto">
-          {/* TÍTULO DA SEÇÃO */}
-          <div className="mb-5 space-y-2">
-            <h2 className="font-cinzel text-[18px] tracking-[0.4em] uppercase opacity-90">
+      
+      {/* feedbacks */}
+      <section className="w-full py-20 px-10 md:px-20 bg-white text-[#8E8781]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="font-cinzel text-xs tracking-[0.4em] uppercase font-bold opacity-80">
               Depoimentos
             </h2>
-            <h3 className="font-cinzel text-2xl md:text-4xl">
+            <h3 className="font-cinzel text-3xl md:text-5xl text-[#4A4540]">
               Confiança de nossos clientes
             </h3>
+            <div className="w-20 h-[2px] bg-[#8E8781] mx-auto"></div>
           </div>
 
-          {/* ESTRUTURA REFORMULADA: TEXTO À ESQUERDA E BOTÕES À DIREITA */}
-          <div className="relative border-t border-[#8E8781]/10 pt-12">
-            <div className="flex flex-col md:flex-row justify-between items-end md:items-center">
-              {/* BLOCO DE TEXTO (LADO ESQUERDO) */}
-              <div className="flex-1 transition-all duration-500 ease-in-out">
-                <span className="text-5xl font-serif opacity-70 block leading-none">
-                  “
-                </span>
-                <p className="font-inter text-lg md:text-xl italic leading-relaxed text-gray-700 mb-8 max-w-2xl">
-                  {reviews[current].texto}
-                </p>
+          <div className="relative flex items-center justify-between gap-4 md:gap-12">
+            <button
+              onClick={prev}
+              className="shrink-0 w-12 h-12 rounded-full border border-[#8E8781]/20 flex items-center justify-center text-[#8E8781] hover:bg-[#8E8781] hover:text-white transition-all duration-300 shadow-sm"
+              aria-label="Depoimento Anterior"
+            >
+              <ChevronLeft size={28} strokeWidth={1} />
+            </button>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-6 h-[1px] bg-[#8E8781]"></div>
-                  <p className="font-cinzel text-[11px] tracking-[0.2em] uppercase font-bold text-[#8E8781]">
-                    {reviews[current].nome}
+            <div className="flex-1 text-center py-10 px-4 md:px-10 transition-all duration-700 ease-in-out relative">
+              <span className="absolute top-0 left-0 md:left-4 text-7xl font-serif text-[#D3CCC6] leading-none select-none">
+                “
+              </span>
+
+              <p className="font-inter text-xl md:text-2xl italic leading-relaxed text-[#333333] mb-10 max-w-3xl mx-auto relative z-10">
+                {reviews[current].texto}
+              </p>
+
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-8 h-[1px] bg-[#8E8781]"></div>
+                <p className="font-cinzel text-xs tracking-[0.3em] uppercase font-extrabold text-[#8E8781]">
+                  {reviews[current].nome}
+                </p>
+                <span className="text-[10px] font-inter uppercase text-gray-400 tracking-widest">
+                  {reviews[current].cidade || "Natal / RN"}
+                </span>
+              </div>
+            </div>
+
+            <button
+              onClick={next}
+              className="shrink-0 w-12 h-12 rounded-full border border-[#8E8781]/20 flex items-center justify-center text-[#8E8781] hover:bg-[#8E8781] hover:text-white transition-all duration-300 shadow-sm"
+              aria-label="Próximo Depoimento"
+            >
+              <ChevronRight size={28} strokeWidth={1} />
+            </button>
+          </div>
+
+          <div className="flex justify-center gap-3 mt-16">
+            {reviews.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)} 
+                className={`h-[2px] transition-all duration-500 ${
+                  current === i
+                    ? "w-12 bg-[#8E8781]"
+                    : "w-4 bg-[#8E8781]/20 hover:bg-[#8E8781]/40"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F4F4F0] py-24 px-10 md:px-20 border-t border-[#8E8781]/10">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+          <div className="md:w-1/2 space-y-10">
+            <div className="space-y-4">
+              <h2 className="font-cinzel text-xs tracking-[0.4em] text-[#8E8781] uppercase font-bold">
+                Onde Estamos
+              </h2>
+              <h3 className="font-cinzel text-4xl text-[#4A4540] leading-tight">
+                Agende uma visita em <br /> nossa sede em Natal
+              </h3>
+              <div className="w-16 h-[2px] bg-[#8E8781]"></div>
+            </div>
+
+            <div className="space-y-8 font-inter">
+              <div className="flex gap-6 items-start">
+                <div className="shrink-0 w-10 h-10 border border-[#8E8781]/30 flex items-center justify-center text-[#8E8781]">
+                  <MapPin size={20} strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h4 className="font-cinzel font-bold text-[#8E8781] text-sm tracking-widest mb-1">
+                    ENDEREÇO
+                  </h4>
+                  <p className="text-[#333333] leading-relaxed">
+                    Av. Engenheiro Roberto Freire, Ponta Negra <br />
+                    Natal/RN - CEP: 59090-000
                   </p>
                 </div>
               </div>
 
-              {/* BOTÕES DE NAVEGAÇÃO (LADO DIREITO) */}
-              <div className="flex gap-10 shrink-0">
-                <button
-                  onClick={prev}
-                  className="flex items-center justify-center w-12 h-12 border border-[#8E8781]/30 text-[#8E8781] hover:bg-[#8E8781] hover:text-[#E8E9D4] transition-all duration-300 group"
-                  aria-label="Anterior"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1}
-                    stroke="currentColor"
-                    className="w-8 h-8 group-hover:-translate-x-1 transition-transform"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                    />
-                  </svg>
-                </button>
-
-                <button
-                  onClick={next}
-                  className="flex items-center justify-center w-12 h-12 border border-[#8E8781]/30 text-[#8E8781] hover:bg-[#8E8781] hover:text-[#E8E9D4] transition-all duration-300 group"
-                  aria-label="Próximo"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1}
-                    stroke="currentColor"
-                    className="w-8 h-8 group-hover:translate-x-1 transition-transform"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                    />
-                  </svg>
-                </button>
+              <div className="flex gap-6 items-start">
+                <div className="shrink-0 w-10 h-10 border border-[#8E8781]/30 flex items-center justify-center text-[#8E8781]">
+                  <Clock size={20} strokeWidth={1.5} />
+                </div>
+                <div>
+                  <h4 className="font-cinzel font-bold text-[#8E8781] text-sm tracking-widest mb-1">
+                    ATENDIMENTO
+                  </h4>
+                  <p className="text-[#333333] leading-relaxed">
+                    Segunda a Sexta: 08h às 18h <br />
+                    Atendimento presencial e online.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* INDICADORES (PONTINHOS) ABAIXO DE TUDO */}
-            <div className="flex gap-2 mt-12">
-              {reviews.map((_, i) => (
-                <div
-                  key={i}
-                  className={`h-[2px] transition-all duration-500 ${current === i ? "w-10 bg-[#8E8781]" : "w-3 bg-[#8E8781]/20"}`}
-                />
-              ))}
+            <div className="pt-6">
+              <a
+                href="https://wa.me/5584991053771"
+                target="_blank"
+                className="bg-[#8E8781] text-[#E8E9D4] px-10 py-4 font-cinzel text-xs tracking-[0.3em] font-bold transition-all shadow-xl inline-block"
+              >
+                COMO CHEGAR
+              </a>
+            </div>
+          </div>
+
+          <div className="md:w-1/2 w-full h-[450px] relative group">
+            <div className="rmd:w-1/2 w-full h-[450px]">
+              <div className="w-full h-full overflow-hidden rounded-2xl shadow-xl border border-[#8E8781]/20">
+                <iframe
+                  title="Localização Braga & Fonsêca Natal"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.472790231397!2d-35.2045361!3d-5.7886901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b30106f9f0e5f3%3A0x879d6cb58c20c090!2sBraga%20e%20Fons%C3%AAca%20%7C%20Advocacia!5e0!3m2!1spt-BR!2sbr!4v1778264063598!5m2!1spt-BR!2sbr"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="contrast-125  transition-all duration-700"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
