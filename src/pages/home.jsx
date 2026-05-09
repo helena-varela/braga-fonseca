@@ -437,8 +437,8 @@ export default function Home() {
                     ENDEREÇO
                   </h4>
                   <p className="text-[#333333] leading-relaxed">
-                    Av. Engenheiro Roberto Freire, Ponta Negra <br />
-                    Natal/RN - CEP: 59090-000
+                    Av. Deodoro da Fonseca, 741 - Petrópolis <br />
+                    Natal/RN - CEP: 59020-120
                   </p>
                 </div>
               </div>
@@ -452,7 +452,7 @@ export default function Home() {
                     ATENDIMENTO
                   </h4>
                   <p className="text-[#333333] leading-relaxed">
-                    Segunda a Sexta: 08h às 18h <br />
+                    Segunda a Sexta: 08h às 17h <br />
                     Atendimento presencial e online.
                   </p>
                 </div>
