@@ -12,39 +12,39 @@ export default function NavBar() {
           <img
             src={logo2}
             alt="Braga & Fonsêca"
-            className="h-8 md:h-12 w-auto object-contain cursor-pointer"
+            className="h-8 md:h-11 w-auto object-contain cursor-pointer"
           />
         </Link>
       </div>
 
-      <div className="flex gap-1 md:gap-2">
+      <div className="bg-[#8E8781]/10 p-1 rounded-full flex items-center border border-[#8E8781]/20">
         <Link
           to="/cristina-braga"
           onClick={() => setView("servidor")}
-          className={`text-[10px] md:text-[14px] font-cinzel tracking-[0.05em] md:tracking-[0.1em] px-3 md:px-5 py-2 transition-all text-center leading-tight ${
-            view === "servidor"
-              ? "bg-[#8E8781] text-white"
-              : "text-[#8E8781] hover:bg-[#D3CCC6]"
-          }`}
+          className={`
+            text-[9px] md:text-[12px] font-cinzel font-bold tracking-widest
+            px-4 md:px-8 py-2 rounded-full transition-all duration-500 text-center
+            ${view === "servidor" 
+              ? "bg-[#8E8781] text-white shadow-md" 
+              : "text-[#8E8781] hover:bg-[#8E8781]/5"}
+          `}
         >
-          <span className="md:inline">
-            SERVIDOR <br className="md:hidden" /> PÚBLICO
-          </span>
+          SERVIDOR
         </Link>
-
+        
         <Link
           to="/kelly-fonseca"
           onClick={() => setView("inss")}
-          className={`text-[10px] md:text-[14px] font-cinzel tracking-[0.05em] md:tracking-[0.1em] px-3 md:px-5 py-2 transition-all text-center leading-tight ${
-            view === "inss"
-              ? "bg-[#8E8781] text-white"
-              : "text-[#8E8781] hover:bg-[#D3CCC6]"
-          }`}
+          className={`
+            text-[9px] md:text-[12px] font-cinzel font-bold tracking-widest
+            px-4 md:px-8 py-2 rounded-full transition-all duration-500 text-center
+            ${view === "inss" 
+              ? "bg-[#8E8781] text-white shadow-md" 
+              : "text-[#8E8781] hover:bg-[#8E8781]/5"}
+          `}
         >
-          <span className="md:inline">
-            BENEFÍCIOS <br className="md:hidden" /> INSS
-          </span>
-        </Link>
+          INSS
+        </Link> {/* Ajustado de </cite> para </Link> */}
       </div>
     </nav>
   );

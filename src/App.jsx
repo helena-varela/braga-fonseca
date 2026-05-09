@@ -4,10 +4,12 @@ import Footer from './components/footer.jsx';
 import Home from './pages/home.jsx';
 import CristinaPage from './pages/cristinapage.jsx';
 import KellyPage from './pages/kellypage.jsx';
+import ScrollToTop from './components/scrolltotop.jsx';
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar /> 
       <Routes>
         <Route path="/" element={<Home />} />
