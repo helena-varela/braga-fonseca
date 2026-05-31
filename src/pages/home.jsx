@@ -75,7 +75,7 @@ export default function Home() {
   return (
     <div className="bg-[#D3CCC6] w-screen max-w-none m-0 p-0 font-inter text-black overflow-x-hidden">
       <section
-        className="w-full min-h-screen md:h-screen relative flex items-center bg-cover bg-fixed bg-center bg-no-repeat overflow-hidden transition-all duration-1000"
+        className="w-full min-h-screen xl:h-screen relative flex items-center bg-cover bg-fixed bg-center bg-no-repeat overflow-hidden transition-all duration-1000"
         style={{
           backgroundImage: `url(${image})`,
           borderBottomLeftRadius: "40% 8%",
@@ -84,25 +84,33 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-0 animate-pulse-slow"></div>
 
-        <div className="relative z-10 w-full px-6 sm:px-10 md:px-20 lg:px-29 py-24 md:py-0 flex flex-col justify-center">
-          <div className="max-w-full md:max-w-3/4 lg:w-2/3 space-y-6 md:space-y-9">
-            <span className="font-cinzel tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-xs uppercase text-brand-light/70 block animate-fade-in-down">
+        <div className="relative z-10 w-full px-6 sm:px-10 md:px-20 lg:px-24 xl:px-29 pt-28 pb-12 xl:py-0 flex flex-col justify-center">
+          <div className="max-w-full md:max-w-3/4 lg:w-11/12 xl:w-2/3 space-y-6 md:space-y-8">
+          
+            <span className="font-cinzel tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-xs uppercase text-brand-light/90 block animate-fade-in-down lg:pt-4">
               Advocacia Estratégica & Humanizada
             </span>
-            <h1 className="font-cinzel text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight md:leading-[1.1] text-brand-light animate-fade-in-up">
+
+            <h1 className="font-cinzel text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-7xl leading-tight md:leading-[1.15] xl:leading-[1.1] text-brand-light animate-fade-in-up">
               {data.dor}
             </h1>
-            <p className="font-inter text-base md:text-xl lg:text-2xl text-brand-light/90 max-w-xl leading-relaxed animate-fade-in-up [animation-delay:200ms]">
+
+            <p className="font-inter text-base md:text-lg lg:text-xl xl:text-2xl text-brand-light/90 max-w-xl lg:max-w-2xl leading-relaxed animate-fade-in-up [animation-delay:200ms]">
               {data.subDor}
             </p>
 
             <div className="flex pt-4 md:pt-6 animate-fade-in-up [animation-delay:400ms]">
               <button className="relative group overflow-hidden w-full md:w-auto bg-[#8E8781] text-[#E8E9D4] px-8 md:px-20 py-4 md:py-5 font-cinzel text-xs md:text-sm tracking-[0.3em] font-bold cursor-pointer rounded-sm transition-all duration-500">
                 <span className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-20deg] group-hover:left-full transition-all duration-1000"></span>
-
-                <span className="relative z-10 group-hover:tracking-[0.4em] transition-all duration-500">
-                  FALAR COM UMA ESPECIALISTA
-                </span>
+                <a
+                  href="https://wa.me/5584991053771"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="relative z-10 group-hover:tracking-[0.4em] transition-all duration-500">
+                    FALAR COM UMA ESPECIALISTA
+                  </span>
+                </a>
               </button>
             </div>
           </div>
@@ -111,18 +119,18 @@ export default function Home() {
         <style
           dangerouslySetInnerHTML={{
             __html: `
-              @keyframes fadeInDown {
-                from { opacity: 0; transform: translateY(-20px); }
-                to { opacity: 1; transform: translateY(0); }
-              }
-              @keyframes fadeInUp {
-                from { opacity: 0; transform: translateY(30px); }
-                to { opacity: 1; transform: translateY(0); }
-              }
-              .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
-              .animate-fade-in-up { opacity: 0; animation: fadeInUp 1s ease-out forwards; }
-              .animate-pulse-slow { animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-            `,
+        @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up { opacity: 0; animation: fadeInUp 1s ease-out forwards; }
+        .animate-pulse-slow { animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+      `,
           }}
         />
       </section>
@@ -169,7 +177,7 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-white/20 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
 
                 <span
-                  className={`font-cinzel text-[20px] tracking-[0.4em] uppercase font-bold transition-all duration-500 group-hover:tracking-[0.5em] ${item.dark ? "text-[#E8E9D4]" : "text-[#736e69]"}`}
+                  className={`font-cinzel text-[20px] tracking-[0.2em] uppercase font-bold transition-all duration-500 group-hover:tracking-[0.3em] ${item.dark ? "text-[#E8E9D4]" : "text-[#736e69]"}`}
                 >
                   {item.num}. {item.t}
                 </span>
@@ -331,14 +339,14 @@ export default function Home() {
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
             <button
               onClick={prev}
-              className="hidden md:flex shrink-0 w-12 h-12 rounded-full border border-[#8E8781]/20 items-center justify-center text-[#8E8781] hover:bg-[#8E8781] hover:text-white transition-all duration-300 shadow-sm"
+              className="cursor-pointer hidden md:flex shrink-0 w-12 h-12 rounded-full border border-[#8E8781]/20 items-center justify-center text-[#8E8781] hover:bg-[#8E8781] hover:text-white transition-all duration-300 shadow-sm"
               aria-label="Anterior"
             >
               <ChevronLeft size={24} strokeWidth={1.5} />
             </button>
 
             <div
-              key={current} 
+              key={current}
               className="flex-1 text-center py-6 md:py-10 px-2 md:px-10 relative animate-fade-in-blur"
             >
               <span className="absolute -top-4 left-1/2 -translate-x-1/2 md:translate-x-0 md:top-0 md:left-4 text-6xl md:text-7xl font-serif text-[#D3CCC6] opacity-40 leading-none select-none">
@@ -362,7 +370,7 @@ export default function Home() {
 
             <button
               onClick={next}
-              className="hidden md:flex shrink-0 w-12 h-12 rounded-full border border-[#8E8781]/20 items-center justify-center text-[#8E8781] hover:bg-[#8E8781] hover:text-white transition-all duration-300 shadow-sm"
+              className="cursor-pointer hidden md:flex shrink-0 w-12 h-12 rounded-full border border-[#8E8781]/20 items-center justify-center text-[#8E8781] hover:bg-[#8E8781] hover:text-white transition-all duration-300 shadow-sm"
               aria-label="Próximo"
             >
               <ChevronRight size={24} strokeWidth={1.5} />
@@ -461,7 +469,7 @@ export default function Home() {
 
             <div className="pt-6">
               <a
-                href="https://wa.me/5584991053771"
+                href="https://www.google.com/maps/place/Braga+e+Fons%C3%AAca+%7C+Advocacia/@-5.7886901,-35.2045361,17z/data=!3m1!4b1!4m6!3m5!1s0x7b30106f9f0e5f3:0x879d6cb58c20c090!8m2!3d-5.7886901!4d-35.2045361!16s%2Fg%2F11zjl25t_6?hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 className="bg-[#8E8781] text-[#E8E9D4] px-10 py-4 font-cinzel text-xs tracking-[0.3em] font-bold transition-all shadow-xl inline-block"
               >

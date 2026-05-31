@@ -2,7 +2,7 @@ import hero from "../assets/hero-cristina.png";
 
 export default function CristinaPage() {
   return (
-    <main className="w-full pt-25">
+    <main className="bg-[#E8E9D4] w-screen max-w-none m-0 p-0 font-inter text-black overflow-x-hidden">
       {/* hero */}
       <section
         className="w-full h-[95vh] relative flex items-center px-6 sm:px-10 md:px-20 bg-cover bg-center bg-no-repeat overflow-hidden group"

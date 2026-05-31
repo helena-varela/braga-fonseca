@@ -2,7 +2,7 @@ import hero from "../assets/hero-kelly.png";
 
 export default function KellyPage() {
   return (
-    <main className="w-full bg-[#F9F9F4] pt-20">
+    <main className="bg-white w-screen max-w-none m-0 p-0 font-inter text-black overflow-x-hidden">
       {/* hero */}
       <section
         className="w-full h-[95vh] relative flex items-center px-6 sm:px-10 md:px-20 bg-cover bg-center bg-no-repeat overflow-hidden group"
