@@ -31,7 +31,8 @@ export default function CristinaPage() {
 
           <p className="font-inter text-base md:text-xl text-[#E8E9D4]/90 max-w-xl leading-relaxed animate-fade-in-up [animation-delay:200ms]">
             Garantindo que a dedicação de uma vida inteira ao serviço público
-            seja respeitada e recompensada conforme a lei em Natal e todo o RN.
+            seja respeitada e recompensada conforme a lei em Natal e todo o Rio
+            Grande do Norte.
           </p>
 
           <div className="flex pt-4 animate-fade-in-up [animation-delay:400ms]">
@@ -93,16 +94,28 @@ export default function CristinaPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                t: "Progressões Travadas",
-                d: "Atuação jurídica estratégica para destravar níveis, classes e letras que a administração pública ignora ou atrasa indevidamente.",
+                t: "Carreira & Evolução Funcional",
+                d: "Ações para destravar promoções, progressões atrasadas e garantia de gratificações de função devidas pela administração pública.",
               },
               {
-                t: "Cálculo de Aposentadoria",
-                d: "Revisão detalhada de tempo de contribuição e regras de transição para garantir que nenhum direito financeiro seja esquecido na sua aposentadoria.",
+                t: "Direitos, Licenças & PCD",
+                d: "Garantia de licenças-prêmio, licença qualificação, além de pedidos estratégicos de redução de carga horária para servidores PCD.",
               },
               {
-                t: "Processos Disciplinares",
-                d: "Defesa técnica, ética e humanizada em Processos Administrativos Disciplinares (PADs) para proteger sua estabilidade e dignidade funcional.",
+                t: "Defesa em Processos e PAD",
+                d: "Atuação técnica e humanizada em Processos Administrativos Disciplinares (PAD), sindicâncias e proteção contra remoções ou transferências arbitrárias.",
+              },
+              {
+                t: "Concursos Públicos",
+                d: "Intervenção jurídica especializada em fraudes, preterição de vagas em certames e defesas junto a bancas de heteroidentificação.",
+              },
+              {
+                t: "Cobranças & Retroativos",
+                d: "Ações de cobrança para recebimento de valores retroativos acumulados e indenizações financeiras por licenças-prêmio não gozadas.",
+              },
+              {
+                t: "Aposentadoria & Pensão",
+                d: "Planejamento previdenciário, revisões de pensão por morte e pedidos de indenização por demora injustificada na concessão da aposentadoria.",
               },
             ].map((item, i) => (
               <div
@@ -112,11 +125,12 @@ export default function CristinaPage() {
                   shadow-sm hover:shadow-2xl flex flex-col justify-between 
                   min-h-[340px] relative overflow-hidden animate-fade-in-up
                 `}
+                style={{ animationDelay: `${(i + 1) * 150}ms` }}
               >
                 <div className="absolute inset-0 bg-[#8E8781]/5 translate-y-full"></div>
                 <div className="relative z-10">
                   <span className="font-cinzel text-[10px] md:text-[12px] text-[#8E8781]/90 tracking-widest block mb-6 uppercase opacity-60">
-                    Área de Atuação 0{i + 1}
+                    Área de Atuação {i + 1 < 10 ? `0${i + 1}` : i + 1}
                   </span>
                   <h4 className="font-cinzel text-lg md:text-xl text-[#8E8781] mb-4 font-bold group-hover:translate-x-2 transition-transform duration-500">
                     {item.t}
@@ -151,7 +165,7 @@ export default function CristinaPage() {
                 transition-all duration-500 uppercase font-bold
               "
             >
-              Agendar Consulta em Natal
+              Agendar Consulta
             </a>
           </div>
         </div>
@@ -196,16 +210,20 @@ export default function CristinaPage() {
             <div className="grid gap-10 pt-4">
               {[
                 {
-                  label: "OAB/RN",
-                  text: "Advogada regularmente inscrita na Ordem dos Advogados do Brasil, Seccional Rio Grande do Norte.",
+                  label: "FORMAÇÃO",
+                  text: "Mestre em Direito pela UFRN, especialista em Direito Administrativo com foco em servidores públicos.",
                 },
                 {
-                  label: "ESPECIALISTA",
-                  text: "Pós-graduada em Direito Administrativo, com foco em regimes próprios de previdência social e estatutos dos servidores.",
+                  label: "OAB & INSTITUTO",
+                  text: "Presidente da Comissão de Direito Administrativo da OAB/RN e vice-presidente do Instituto de Direito Administrativo Seabra Fagundes.",
+                },
+                {
+                  label: "ATUAÇÃO SINDICAL",
+                  text: "Atuou durante quase uma década como assessora jurídica do sindicato de servidores em educação pública do Rio Grande do Norte (SINTE/RN) na defesa dos servidores públicos da educação.",
                 },
                 {
                   label: "EXPERIÊNCIA",
-                  text: "Vasta experiência no atendimento a servidores municipais e estaduais do RN, garantindo a aplicação justa das leis vigentes e a proteção da estabilidade funcional.",
+                  text: "Há treze anos atuando na defesa das mais diversas carreiras dos servidores públicos de Natal e do Estado do Rio Grande do Norte, como educação, saúde e segurança pública.",
                 },
               ].map((item, i) => (
                 <div

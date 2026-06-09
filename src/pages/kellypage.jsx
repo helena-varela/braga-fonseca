@@ -21,17 +21,15 @@ export default function KellyPage() {
         <div className="relative z-10 w-full flex justify-end">
           <div className="w-full md:w-3/4 lg:w-1/2 space-y-7 text-right flex flex-col items-end py-20">
             <span className="font-cinzel tracking-[0.3em] md:tracking-[0.4em] text-[10px] md:text-xs uppercase text-[#D3CCC6] font-bold block animate-fade-in-right">
-              Direito Administrativo & Previdenciário
+              Direito Previdenciário & Especialista em INSS
             </span>
 
             <h1 className="font-cinzel text-3xl md:text-6xl text-white leading-[1.2] md:leading-[1.1] animate-fade-in-right [animation-delay:200ms]">
-              Defesa Estratégica para Servidores Públicos
+              Proteção e Garantia de Benefícios Previdenciários
             </h1>
 
             <p className="font-inter text-base md:text-xl text-[#E8E9D4]/90 max-w-xl leading-relaxed animate-fade-in-right [animation-delay:400ms]">
-              Garantindo que a dedicação de uma vida inteira ao serviço público
-              seja respeitada e recompensada conforme a lei em Natal e todo o
-              RN.
+              Garantindo que o esforço de uma vida inteira de trabalho seja recompensado com o melhor benefício e a aposentadoria justa.
             </p>
             <div className="flex pt-4 w-full md:w-auto justify-end animate-fade-in-right [animation-delay:600ms]">
               <a
