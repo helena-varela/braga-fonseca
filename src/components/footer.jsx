@@ -1,4 +1,5 @@
 import logo from "../assets/logo.png";
+import logoInclude from "../assets/Branco.png";
 
 export default function Footer() {
   return (
@@ -6,11 +7,19 @@ export default function Footer() {
       <div className="max-w-none w-full grid md:grid-cols-3 gap-12 items-start">
         {/* COLUNA 1: LOGO E SOBRE */}
         <div className="space-y-6">
-          <img
-            src={logo}
-            alt="Braga & Fonsêca"
-            className="h-12 w-auto brightness-0 invert opacity-90"
-          />
+          <div className="flex items-center gap-6">
+            <img
+              src={logo}
+              alt="Braga & Fonsêca"
+              className="h-12 w-auto brightness-0 invert opacity-90"
+            />
+            <img
+              src={logoInclude}
+              alt="Include"
+              className="h-13 w-auto brightness-0 invert opacity-90" 
+            />
+          </div>
+          
           <p className="font-inter text-sm leading-relaxed opacity-70 max-w-xs">
             Compromisso com a ética e a estratégia jurídica para garantir que
             você exerça os direitos que já possui.
