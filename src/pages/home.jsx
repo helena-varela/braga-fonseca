@@ -2,6 +2,7 @@ import { useState } from "react";
 import image from "../assets/image.png";
 import cristinabraga from "../assets/cristinabraga.png";
 import kelly from "../assets/kelly.png";
+import jose from "../assets/jose.jpeg";
 import { Link } from "react-router-dom";
 import { MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -86,7 +87,6 @@ export default function Home() {
 
         <div className="relative z-10 w-full px-6 sm:px-10 md:px-20 lg:px-24 xl:px-29 pt-28 pb-12 xl:py-0 flex flex-col justify-center">
           <div className="max-w-full md:max-w-3/4 lg:w-11/12 xl:w-2/3 space-y-6 md:space-y-8">
-          
             <span className="font-cinzel tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-xs uppercase text-brand-light/90 block animate-fade-in-down lg:pt-4">
               Advocacia Estratégica & Humanizada
             </span>
@@ -309,6 +309,51 @@ export default function Home() {
                 </div>
 
                 <Link to="/kelly-fonseca">
+                  <button
+                    Ver
+                    Especialidade
+                    className="font-cinzel text-[15px] tracking-[0.3em] text-[#8E8781] border border-[#8E8781] px-10 py-4 hover:bg-[#8E8781] hover:text-white transition-all uppercase font-bold cursor-pointer"
+                  >
+                    Ver Especialidade
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Card de José */}
+            <div className="w-full md:w-[420px] flex flex-col items-center group">
+              <div className="w-full md:w-[420px] flex flex-col items-center group">
+                <Link
+                  to="/jose-anderson"
+                  className="group block relative w-full aspect-[4/5] overflow-hidden rounded-t-full border border-[#8E8781]/20 bg-[#D3CCC6]/30 mb-5 transition-all duration-700 hover:border-[#8E8781] hover:shadow-2xl"
+                >
+                  <img
+                    src={jose}
+                    alt="Dra. Cristina Braga"
+                    className="w-full h-full object-cover object-center transition-all duration-700 cursor-pointer group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-[#8E8781]/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </Link>
+                <div className="absolute inset-0 bg-[#8E8781]/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </div>
+
+              <div className="text-center w-full flex flex-col items-center">
+                <h4 className="font-cinzel text-3xl text-[#8E8781] tracking-wider mb-2">
+                  José Anderson Souza de Salles
+                </h4>
+                <p className="font-inter text-xs text-gray-400 uppercase tracking-[0.3em] mb-6 pb-4 border-b border-[#8E8781]/10 w-3/4">
+                  Especialista em Direito do Trabalho
+                </p>
+                <div className="min-h-[120px] flex items-center justify-center mb-3">
+                  <p className="font-inter text-sm md:text-base text-gray-600 leading-relaxed px-4">
+                    Dr. José Anderson Souza de Salles é especialista em direito do
+                    trabalho, focado na orientação segura de trabalhadores e
+                    empresas.
+                  </p>
+                </div>
+
+                <Link to="/jose-anderson">
                   <button
                     Ver
                     Especialidade
