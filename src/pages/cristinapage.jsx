@@ -1,26 +1,40 @@
 import hero from "../assets/hero-cristina.png";
+import heroMobile from "../assets/hero-mobile-cristina.png";
+import { useState, useEffect } from "react";
 
 export default function CristinaPage() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   return (
     <main className="bg-[#E8E9D4] w-screen max-w-none m-0 p-0 font-inter text-black overflow-x-hidden">
-      {/* hero */}
       <section
-        className="w-full h-[95vh] relative flex items-center px-6 sm:px-10 md:px-20 bg-cover bg-center bg-no-repeat overflow-hidden group"
+        className="w-full h-[95vh] relative flex items-center px-6 sm:px-10 md:px-20 bg-no-repeat overflow-hidden group"
         style={{
-          backgroundImage: `url(${hero})`,
           borderBottomLeftRadius: "40% 8%",
           borderBottomRightRadius: "50% 8%",
         }}
       >
-        <div className="absolute inset-0 bg-black/40 z-0"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent z-0 animate-pulse-slow"></div>
-
         <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center scale-110 animate-subtle-zoom -z-10"
-          style={{ backgroundImage: `url(${hero})` }}
+          className="absolute inset-0 w-full h-full bg-cover bg-center scale-110 animate-subtle-zoom z-0"
+          style={{
+            backgroundImage: `url(${isMobile ? heroMobile : hero})`,
+          }}
         ></div>
 
-        <div className="relative z-10 w-full md:w-3/4 lg:w-1/2 space-y-7 py-20">
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent z-10 animate-pulse-slow"></div>
+
+        <div className="relative z-20 w-full md:w-3/4 lg:w-1/2 space-y-7 py-20">
           <span className="font-cinzel tracking-[0.3em] md:tracking-[0.4em] text-[10px] md:text-xs uppercase text-[#D3CCC6] font-bold block animate-fade-in-down">
             Direito Administrativo & Previdenciário
           </span>
@@ -51,23 +65,23 @@ export default function CristinaPage() {
         <style
           dangerouslySetInnerHTML={{
             __html: `
-              @keyframes subtleZoom {
-                from { transform: scale(1.1); }
-                to { transform: scale(1); }
-              }
-              @keyframes fadeInDown {
-                from { opacity: 0; transform: translateY(-20px); }
-                to { opacity: 1; transform: translateY(0); }
-              }
-              @keyframes fadeInUp {
-                from { opacity: 0; transform: translateY(30px); }
-                to { opacity: 1; transform: translateY(0); }
-              }
-              .animate-subtle-zoom { animation: subtleZoom 5s ease-out forwards; }
-              .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
-              .animate-fade-in-up { opacity: 0; animation: fadeInUp 1s ease-out forwards; }
-              .animate-pulse-slow { animation: pulse 10s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-            `,
+            @keyframes subtleZoom {
+              from { transform: scale(1.1); }
+              to { transform: scale(1); }
+            }
+            @keyframes fadeInDown {
+              from { opacity: 0; transform: translateY(-20px); }
+              to { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes fadeInUp {
+              from { opacity: 0; transform: translateY(30px); }
+              to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-subtle-zoom { animation: subtleZoom 5s ease-out forwards; }
+            .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+            .animate-fade-in-up { opacity: 0; animation: fadeInUp 1s ease-out forwards; }
+            .animate-pulse-slow { animation: pulse 10s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+          `,
           }}
         />
       </section>
