@@ -77,6 +77,104 @@ const servicosLicitacoes = [
   },
 ];
 
+const servicos = [
+  {
+    t: "Execução contratual e reequilíbrio econômico-financeiro",
+    resumo:
+      "A lei garante o direito à manutenção do equilíbrio econômico-financeiro dos contratos. Nossa equipe atua para que a sua empresa receba exatamente o valor justo pelo serviço prestado ou produto entregue, evitando prejuízos e garantindo a saúde financeira do negócio.",
+    subitens: [
+      "Pedidos de reajuste, repactuação e revisão.",
+      "Defesa contra glosas e cobranças indevidas.",
+      "Prorrogações e aditivos.",
+      "Notificações administrativas.",
+      "Rescisão contratual e gestão de riscos na execução.",
+    ],
+  },
+  {
+    t: "Defesa em Ação de Improbidade Administrativao",
+    resumo:
+      "Proteção estratégica para gestores e empresas contra acusações de irregularidades na gestão pública. Atuamos na blindagem patrimonial e na anulação de processos sem provas.",
+    subitens: [
+      "Desbloqueio de bens: Medidas urgentes para liberar contas e garantir o fluxo de caixa.",
+      "Demonstração de boa-fé: Teses focadas na ausência de dolo (intenção) para extinguir a ação.",
+      "Produção de provas: Auditoria e perícia técnica de contratos e prestação de contas.",
+      "Acordos estratégicos: Negociação de Acordos de Não Persecução Cível (ANPC) vantajosos.",
+    ],
+  },
+  {
+    t: "Aposentadoria & Pensão",
+    resumo:
+      "Planejamento previdenciário, revisões de pensão por morte e pedidos de indenização por demora injustificada na concessão da aposentadoria.",
+    subitens: [
+      "Planejamento previdenciário: Cálculo do melhor momento e valor para se aposentar.",
+      "Aposentadoria por idade ou tempo: Concessão do benefício pelas regras mais vantajosas.",
+      "Pensão por morte: Amparo e liberação do benefício para os dependentes.",
+      "Benefícios por incapacidade: Defesa em casos de invalidez ou auxílio-doença negados.",
+      "Revisão de aposentadoria: Teses para aumentar o valor do benefício já pago.",
+      "Regime de servidores públicos: Regras específicas para funcionários de carreira.",
+    ],
+  },
+  {
+    t: "Cobranças & Retroativos",
+    resumo:
+      "Ações de cobrança para recebimento de valores retroativos acumulados e indenizações financeiras por licenças-prêmio não gozadas.",
+    subitens: [
+      "Cobrança de atrasados: Recebimento de valores que o INSS deixou de pagar desde o pedido inicial.",
+      "Ações de cobrança: Recuperação de retroativos devidos a servidores públicos e pensionistas.",
+      "Execução de sentenças: Agilidade no cálculo e liberação de precatórios e RPVs.",
+      "Revisões com efeitos retroativos: Diferenças salariais ou de benefícios pagas com correção e juros.",
+    ],
+  },
+  {
+    t: "Concursos Públicos",
+    resumo:
+      "Intervenção jurídica especializada em fraudes, preterição de vagas em certames e defesas junto a bancas de heteroidentificação.",
+    subitens: [
+      "Anulação de questões: Recurso contra gabaritos e critérios de correção ilegais.",
+      "Investigação social e exames: Defesa contra reprovações injustas no TAF, psicotécnico ou exames médicos.",
+      "Nomeação de aprovados: Ações para garantir a posse de classificados dentro das vagas ou por preterição.",
+      "Cotas e heteroidentificação: Reversão de exclusões indevidas em vagas reservadas (PCD e negros).",
+      "Exigências abusivas de edital: Combate a requisitos desproporcionais de idade, altura ou títulos.",
+    ],
+  },
+  {
+    t: "Defesa em Processos e PAD",
+    resumo:
+      "Atuação técnica e humanizada em Processos Administrativos Disciplinares (PAD), sindicâncias e proteção contra remoções ou transferências arbitrárias.",
+    subitens: [
+      "Defesa em PAD e sindicância: Proteção contra demissão, suspensão ou advertência de servidores.",
+      "Afastamento preventivo: Medidas para reverter suspensões e garantir o retorno ao cargo.",
+      "Nulidades processuais: Identificação de falhas legais, cerceamento de defesa ou prescrição.",
+      "Sustentação oral e recursos: Defesa presencial e recursos contra decisões sancionatórias.",
+      "Ações de reintegração: Recursos judiciais para recuperar o cargo e receber salários atrasados.",
+    ],
+  },
+  {
+    t: "Direitos, Licenças & PCD",
+    resumo:
+      "Garantia de licenças-prêmio, licença qualificação, além de pedidos estratégicos de redução de carga horária para servidores PCD.",
+    subitens: [
+      "Licenças de servidores: Garantia de licença-prêmio, capacitação, interesse particular ou saúde.",
+      "Vagas e cotas PCD: Defesa em reprovações de exames médicos e fraudes em concursos.",
+      "Isenções fiscais: Processos para compra de veículos com isenção de IPI, ICMS e IPVA.",
+      "Redução de jornada: Horário especial para servidores com filhos ou dependentes PCD.",
+      "Aposentadoria da pessoa com deficiência: Concessão com critérios diferenciados e tempo reduzido.",
+    ],
+  },
+  {
+    t: "Carreira & Evolução Funcional",
+    resumo:
+      "Ações para destravar promoções, progressões atrasadas e garantia de gratificações de função devidas pela administração pública.",
+    subitens: [
+      "Progressões e promoções: Garantia de mudança de nível e classe atrasadas ou negadas.",
+      "Incorporação de gratificações: Inclusão de adicionais e bônus no salário-base de forma definitiva.",
+      "Desvio de função: Cobrança de diferenças salariais por exercer cargo superior ao de contratação.",
+      "Conversão de licença em pecúnia: Recebimento em dinheiro de licenças-prêmio não gozadas na ativa.",
+      "Revisão de quintos e décimos: Defesa do direito adquirido sobre vantagens de funções de confiança.",
+    ],
+  },
+];
+
 export default function CristinaPage() {
   const [isMobile, setIsMobile] = useState(false);
   const [activeModal, setActiveModal] = useState(null);
@@ -163,83 +261,7 @@ export default function CristinaPage() {
       </section>
 
       {/* serviços */}
-      <section className="bg-[#E8E9D4]/30 py-20 px-6 sm:px-10 md:px-20 border-y border-[#8E8781]/10 overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          {/* CABEÇALHO COM FADE-IN */}
-          <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20 animate-fade-in">
-            <h2 className="font-cinzel text-[10px] md:text-xs tracking-[0.4em] text-[#8E8781] uppercase mb-4 font-bold">
-              Serviços Especializados
-            </h2>
-            <h3 className="font-cinzel text-3xl md:text-4xl text-[#8E8781] mb-6 leading-tight">
-              Sua carreira merece segurança jurídica
-            </h3>
-            <p className="font-inter text-gray-600 text-base md:text-lg leading-relaxed">
-              Muitos servidores enfrentam injustiças administrativas por falta
-              de orientação técnica. Identificamos e corrigimos erros que afetam
-              sua vida financeira.
-            </p>
-          </div>
-
-          {/* GRID DE CARDS COM REVELAÇÃO ESCALONADA */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                t: "Carreira & Evolução Funcional",
-                d: "Ações para destravar promoções, progressões atrasadas e garantia de gratificações de função devidas pela administração pública.",
-              },
-              {
-                t: "Direitos, Licenças & PCD",
-                d: "Garantia de licenças-prêmio, licença qualificação, além de pedidos estratégicos de redução de carga horária para servidores PCD.",
-              },
-              {
-                t: "Defesa em Processos e PAD",
-                d: "Atuação técnica e humanizada em Processos Administrativos Disciplinares (PAD), sindicâncias e proteção contra remoções ou transferências arbitrárias.",
-              },
-              {
-                t: "Concursos Públicos",
-                d: "Intervenção jurídica especializada em fraudes, preterição de vagas em certames e defesas junto a bancas de heteroidentificação.",
-              },
-              {
-                t: "Cobranças & Retroativos",
-                d: "Ações de cobrança para recebimento de valores retroativos acumulados e indenizações financeiras por licenças-prêmio não gozadas.",
-              },
-              {
-                t: "Aposentadoria & Pensão",
-                d: "Planejamento previdenciário, revisões de pensão por morte e pedidos de indenização por demora injustificada na concessão da aposentadoria.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className={`
-                  group bg-[#faf7f5] p-8 md:p-10 border border-[#8E8781]/10 
-                  shadow-sm hover:shadow-2xl flex flex-col justify-between 
-                  min-h-[340px] relative overflow-hidden animate-fade-in-up
-                `}
-                style={{ animationDelay: `${(i + 1) * 150}ms` }}
-              >
-                <div className="absolute inset-0 bg-[#8E8781]/5 translate-y-full"></div>
-                <div className="relative z-10">
-                  <span className="font-cinzel text-[10px] md:text-[12px] text-[#8E8781]/90 tracking-widest block mb-6 uppercase opacity-60">
-                    Área de Atuação {i + 1 < 10 ? `0${i + 1}` : i + 1}
-                  </span>
-                  <h4 className="font-cinzel text-lg md:text-xl text-[#8E8781] mb-4 font-bold group-hover:translate-x-2 transition-transform duration-500">
-                    {item.t}
-                  </h4>
-                  <p className="font-inter text-sm text-gray-600 leading-relaxed">
-                    {item.d}
-                  </p>
-                </div>
-
-                <div className="relative z-10 mt-8">
-                  <div className="w-12 h-[1px] bg-[#8E8781]/30 group-hover:w-full group-hover:bg-[#8E8781] transition-all duration-1000"></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="w-full bg-[#faf7f5] py-20 md:py-28 px-4 sm:px-10 md:px-20 lg:px-24 xl:px-29 text-black relative">
+      <section className="w-full g-[#E8E9D4]/30 py-20 md:py-28 px-4 sm:px-10 md:px-20 lg:px-24 xl:px-29 text-black relative">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Cabeçalho */}
           <div className="text-center space-y-3">
@@ -257,19 +279,19 @@ export default function CristinaPage() {
           </div>
 
           {/* Grid de Cards - 3 Colunas Perfeitas */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
-            {servicosLicitacoes.map((item, i) => (
+          <div className="flex flex-wrap justify-center gap-8 pt-6">
+            {servicos.map((item, i) => (
               <div
                 key={i}
                 onClick={() => setActiveModal(item)}
-                className="group bg-white p-8 md:p-10 border border-[#8E8781]/10 shadow-sm hover:shadow-2xl flex flex-col justify-between min-h-[300px] relative overflow-hidden animate-fade-in-up cursor-pointer transition-all duration-500"
+                className="group bg-white p-8 md:p-10 border border-[#8E8781]/10 shadow-sm hover:shadow-2xl flex flex-col justify-between min-h-[300px] w-full md:w-[calc(33.333%-1.34rem)] relative overflow-hidden animate-fade-in-up cursor-pointer transition-all duration-500"
                 style={{ animationDelay: `${(i + 1) * 100}ms` }}
               >
                 <div className="absolute inset-0 bg-[#8E8781]/5 translate-y-full transition-transform duration-500 group-hover:translate-y-0"></div>
 
                 <div className="relative z-10 space-y-4">
                   <span className="font-cinzel text-[10px] md:text-[11px] text-[#8E8781]/70 tracking-widest block uppercase opacity-60">
-                    Soluções para Empresas — 0{i + 1}
+                    Soluções — 0{i + 1}
                   </span>
                   <h4 className="font-cinzel text-base md:text-lg text-[#8E8781] font-bold group-hover:translate-x-2 transition-transform duration-500">
                     {item.t}
