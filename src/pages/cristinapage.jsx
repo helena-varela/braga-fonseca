@@ -2,8 +2,84 @@ import hero from "../assets/hero-cristina.png";
 import heroMobile from "../assets/hero-mobile-cristina.png";
 import { useState, useEffect } from "react";
 
+const servicosLicitacoes = [
+  {
+    t: "Preparação para Vendas Públicas",
+    resumo:
+      "Diagnóstico completo, regularização cadastral e estruturação interna para empresas que desejam vender ao setor público.",
+    subitens: [
+      "Diagnóstico de aptidão para licitar.",
+      "Análise de documentação societária, fiscal, trabalhista e técnica.",
+      "Regularização cadastral e orientação sobre portais de compras públicas.",
+      "Revisão de CNAE, objeto social e capacidade operacional.",
+      "Estruturação de rotina interna para participação em licitações.",
+    ],
+  },
+  {
+    t: "Análise de Editais & Impugnações",
+    resumo:
+      "Identificação de cláusulas restritivas ou ilegais antes do certame, com pedidos de esclarecimento e impugnações estratégicas.",
+    subitens: [
+      "Identificação de cláusulas restritivas ou desproporcionais.",
+      "Análise de exigências técnicas, fiscais e econômico-financeiras.",
+      "Pedidos de esclarecimento junto aos órgãos públicos.",
+      "Elaboração de Impugnações ao edital.",
+      "Avaliação jurídica de riscos antes da participação no certame.",
+    ],
+  },
+  {
+    t: "Acompanhamento de Licitações",
+    resumo:
+      "Suporte consultivo completo na sessão pública, análise jurídica de concorrentes e estratégias para lances e habilitação.",
+    subitens: [
+      "Definição da estratégia jurídica de participação.",
+      "Análise minuciosa de documentos dos concorrentes.",
+      "Acompanhamento em tempo real da sessão pública.",
+      "Orientação sobre lances, negociação, habilitação e julgamento.",
+      "Atuação em pregões eletrônicos, concorrências, credenciamentos e contratações diretas.",
+    ],
+  },
+  {
+    t: "Recursos Administrativos",
+    resumo:
+      "Peças jurídicas ágeis e técnicas para reverter inabilitações ou desclassificações injustas sofridas no certame.",
+    subitens: [
+      "Recurso administrativo contra inabilitação da empresa.",
+      "Recurso administrativo contra desclassificação de propostas.",
+      "Elaboração de Contrarrazões contra recursos de concorrentes.",
+      "Memoriais e pedidos de reconsideração estratégicos.",
+      "Atuação direta perante agentes de contratação, pregoeiros e comissões.",
+    ],
+  },
+  {
+    t: "Reequilíbrio Econômico & Execução",
+    resumo:
+      "Gestão de riscos contratuais, prorrogações, aditivos e reajustes financeiros para proteger o lucro da sua empresa.",
+    subitens: [
+      "Pedidos de reajuste, repactuação e revisão (reequilíbrio econômico-financeiro).",
+      "Defesa contra glosas administrativas e cobranças indevidas.",
+      "Negociação de prorrogações e termos aditivos.",
+      "Notificações administrativas preventivas.",
+      "Rescisão contratual motivada e gestão de riscos na execução do contrato.",
+    ],
+  },
+  {
+    t: "Defesa contra Sanções & Judicialização",
+    resumo:
+      "Ações judiciais de urgência e defesas contra multas, impedimentos de licitar ou declarações de inidoneidade.",
+    subitens: [
+      "Defesa contra advertência, multa, impedimento de licitar e inidoneidade.",
+      "Produção de provas, sustentação de nulidades e revisão de penalidades.",
+      "Mandado de segurança em licitações e medidas liminares urgentes.",
+      "Ações anulatórias de atos administrativos ilegais.",
+      "Proteção jurídica da continuidade das atividades da empresa.",
+    ],
+  },
+];
+
 export default function CristinaPage() {
   const [isMobile, setIsMobile] = useState(false);
+  const [activeModal, setActiveModal] = useState(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -160,16 +236,104 @@ export default function CristinaPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-16 md:mt-20 text-center animate-fade-in [animation-delay:800ms]">
-            <p className="font-inter text-sm text-[#8E8781] mb-8 italic opacity-80">
-              "Justiça para quem dedica a vida ao serviço público."
+      <section className="w-full bg-[#faf7f5] py-20 md:py-28 px-4 sm:px-10 md:px-20 lg:px-24 xl:px-29 text-black relative">
+        <div className="max-w-6xl mx-auto space-y-12">
+          {/* Cabeçalho */}
+          <div className="text-center space-y-3">
+            <span className="font-cinzel tracking-[0.2em] text-[10px] md:text-xs uppercase text-[#8E8781] font-bold block">
+              Atuação Corporativa Avançada
+            </span>
+            <h2 className="font-cinzel text-2xl md:text-4xl text-[#4A4540] font-bold">
+              Licitações e Contratos Públicos
+            </h2>
+            <p className="font-inter text-xs md:text-sm text-gray-600 max-w-lg mx-auto">
+              Clique sobre o card de interesse para conferir o detalhamento da
+              nossa assessoria jurídica.
             </p>
-            <a
-              href="https://wa.me/5584991053771"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
+            <div className="w-12 h-[1px] bg-[#8E8781]/40 mx-auto mt-4"></div>
+          </div>
+
+          {/* Grid de Cards - 3 Colunas Perfeitas */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
+            {servicosLicitacoes.map((item, i) => (
+              <div
+                key={i}
+                onClick={() => setActiveModal(item)}
+                className="group bg-white p-8 md:p-10 border border-[#8E8781]/10 shadow-sm hover:shadow-2xl flex flex-col justify-between min-h-[300px] relative overflow-hidden animate-fade-in-up cursor-pointer transition-all duration-500"
+                style={{ animationDelay: `${(i + 1) * 100}ms` }}
+              >
+                <div className="absolute inset-0 bg-[#8E8781]/5 translate-y-full transition-transform duration-500 group-hover:translate-y-0"></div>
+
+                <div className="relative z-10 space-y-4">
+                  <span className="font-cinzel text-[10px] md:text-[11px] text-[#8E8781]/70 tracking-widest block uppercase opacity-60">
+                    Soluções para Empresas — 0{i + 1}
+                  </span>
+                  <h4 className="font-cinzel text-base md:text-lg text-[#8E8781] font-bold group-hover:translate-x-2 transition-transform duration-500">
+                    {item.t}
+                  </h4>
+                  <p className="font-inter text-xs md:text-sm text-gray-600 leading-relaxed">
+                    {item.resumo}
+                  </p>
+                </div>
+
+                {/* Botão de clique sutil */}
+                <div className="relative z-10 mt-6 flex justify-between items-center">
+                  <span className="font-cinzel text-[10px] text-[#8E8781] tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    Ver detalhamento →
+                  </span>
+                  <div className="w-12 h-[1px] bg-[#8E8781]/30 group-hover:w-20 group-hover:bg-[#8E8781] transition-all duration-700"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* POP-UP MODAL*/}
+        {activeModal && (
+          <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fade-in">
+            <div className="bg-[#4A4540] border border-[#8E8781]/30 max-w-xl w-full p-8 md:p-10 text-[#E8E9D4] relative shadow-2xl rounded-sm scale-100 transition-transform duration-300">
+              <div className="space-y-2 mb-6">
+                <span className="font-cinzel text-[9px] text-[#8E8781] tracking-[0.2em] uppercase font-bold block">
+                  Escopo de Atuação Detalhado
+                </span>
+                <h3 className="font-cinzel text-xl md:text-2xl text-white font-bold tracking-wide pr-6">
+                  {activeModal.t}
+                </h3>
+                <div className="w-12 h-[1px] bg-[#8E8781]"></div>
+              </div>
+
+              <ul className="space-y-4 font-inter text-xs md:text-sm text-[#E8E9D4]/90 leading-relaxed">
+                {activeModal.subitens.map((subitem, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-[#8E8781] mt-0.5 shrink-0">◆</span>
+                    <span>{subitem}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 pt-4 border-t border-[#8E8781]/20 flex justify-end">
+                <button
+                  onClick={() => setActiveModal(null)}
+                  className="font-cinzel text-xs tracking-widest text-[#E8E9D4]/70 hover:text-white border border-[#8E8781]/40 hover:border-[#8E8781] px-5 py-2 cursor-pointer transition-all duration-300"
+                >
+                  FECHAR DETALHES
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+        <div className="mt-16 md:mt-20 text-center animate-fade-in [animation-delay:800ms]">
+          <p className="font-inter text-sm text-[#8E8781] mb-8 italic opacity-80">
+            "Justiça para quem dedica a vida ao serviço público."
+          </p>
+          <a
+            href="https://wa.me/5584991053771"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
                 inline-block text-center w-full md:w-auto 
                 font-cinzel text-[13px] md:text-[15px] 
                 tracking-[0.2em] border border-[#8E8781] 
@@ -178,10 +342,9 @@ export default function CristinaPage() {
                 hover:shadow-xl active:scale-95
                 transition-all duration-500 uppercase font-bold
               "
-            >
-              Agendar Consulta
-            </a>
-          </div>
+          >
+            Agendar Consulta
+          </a>
         </div>
       </section>
 
