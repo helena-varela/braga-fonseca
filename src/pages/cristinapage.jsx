@@ -91,7 +91,7 @@ const servicos = [
     ],
   },
   {
-    t: "Defesa em Ação de Improbidade Administrativao",
+    t: "Defesa em Ação de Improbidade Administrativa",
     resumo:
       "Proteção estratégica para gestores e empresas contra acusações de irregularidades na gestão pública. Atuamos na blindagem patrimonial e na anulação de processos sem provas.",
     subitens: [
@@ -266,10 +266,10 @@ export default function CristinaPage() {
           {/* Cabeçalho */}
           <div className="text-center space-y-3">
             <span className="font-cinzel tracking-[0.2em] text-[10px] md:text-xs uppercase text-[#8E8781] font-bold block">
-              Atuação Corporativa Avançada
+              Soluções Jurídicas Estratégicas
             </span>
             <h2 className="font-cinzel text-2xl md:text-4xl text-[#4A4540] font-bold">
-              Licitações e Contratos Públicos
+              Direito Administrativo & Público
             </h2>
             <p className="font-inter text-xs md:text-sm text-gray-600 max-w-lg mx-auto">
               Clique sobre o card de interesse para conferir o detalhamento da
@@ -277,20 +277,19 @@ export default function CristinaPage() {
             </p>
             <div className="w-12 h-[1px] bg-[#8E8781]/40 mx-auto mt-4"></div>
           </div>
-
-          {/* Grid de Cards - 3 Colunas Perfeitas */}
-          <div className="flex flex-wrap justify-center gap-8 pt-6">
+          
+          <div className="grid grid-cols-1 md:flex md:flex-wrap md:justify-center gap-8 pt-6 max-w-6xl mx-auto">
             {servicos.map((item, i) => (
               <div
                 key={i}
                 onClick={() => setActiveModal(item)}
-                className="group bg-white p-8 md:p-10 border border-[#8E8781]/10 shadow-sm hover:shadow-2xl flex flex-col justify-between min-h-[300px] w-full md:w-[calc(33.333%-1.34rem)] relative overflow-hidden animate-fade-in-up cursor-pointer transition-all duration-500"
+                className="group bg-white p-8 md:p-10 border border-[#8E8781]/40 shadow-sm hover:shadow-2xl flex flex-col justify-between min-h-[400px] w-full md:w-[calc(33.333%-1.34rem)] relative overflow-hidden animate-fade-in-up cursor-pointer transition-all duration-500"
                 style={{ animationDelay: `${(i + 1) * 100}ms` }}
               >
                 <div className="absolute inset-0 bg-[#8E8781]/5 translate-y-full transition-transform duration-500 group-hover:translate-y-0"></div>
 
                 <div className="relative z-10 space-y-4">
-                  <span className="font-cinzel text-[10px] md:text-[11px] text-[#8E8781]/70 tracking-widest block uppercase opacity-60">
+                  <span className="font-cinzel text-[10px] md:text-[11px] text-[#8E8781] tracking-widest block uppercase opacity-60">
                     Soluções — 0{i + 1}
                   </span>
                   <h4 className="font-cinzel text-base md:text-lg text-[#8E8781] font-bold group-hover:translate-x-2 transition-transform duration-500">
@@ -301,7 +300,6 @@ export default function CristinaPage() {
                   </p>
                 </div>
 
-                {/* Botão de clique sutil */}
                 <div className="relative z-10 mt-6 flex justify-between items-center">
                   <span className="font-cinzel text-[10px] text-[#8E8781] tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     Ver detalhamento →
