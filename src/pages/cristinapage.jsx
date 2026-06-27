@@ -213,14 +213,15 @@ export default function CristinaPage() {
             Direito Administrativo & Previdenciário
           </span>
 
-          <h1 className="font-cinzel text-3xl md:text-6xl text-white leading-[1.2] md:leading-[1.1] animate-fade-in-up">
-            Defesa Estratégica para Servidores Públicos
+          <h1 className="font-cinzel text-xl md:text-5xl text-white leading-[1.2] md:leading-[1.1] animate-fade-in-up">
+            Defesa em Improbidade Administrativa e Crimes Contra a Administração
+            Pública
           </h1>
 
           <p className="font-inter text-base md:text-xl text-[#E8E9D4]/90 max-w-xl leading-relaxed animate-fade-in-up [animation-delay:200ms]">
-            Garantindo que a dedicação de uma vida inteira ao serviço público
-            seja respeitada e recompensada conforme a lei em Natal e todo o Rio
-            Grande do Norte.
+            Atuação especializada na defesa de agentes públicos, empresas e
+            particulares perante órgãos de controle, Ministério Público e Poder
+            Judiciário.
           </p>
 
           <div className="flex pt-4 animate-fade-in-up [animation-delay:400ms]">
@@ -231,7 +232,7 @@ export default function CristinaPage() {
               className="relative overflow-hidden w-full md:w-auto bg-[#D3CCC6] text-[#736e69] px-10 md:px-12 py-5 font-cinzel text-xs tracking-[0.3em] font-bold transition-all shadow-2xl rounded-sm hover:bg-white hover:text-[#8E8781] hover:scale-105 active:scale-95 text-center"
             >
               <span className="absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-30deg] group-hover:left-full transition-all duration-1000"></span>
-              <span className="relative z-10">SOLICITAR CONSULTORIA</span>
+              <span className="relative z-10">AGENDAR ANÁLISE DO CASO</span>
             </a>
           </div>
         </div>
@@ -277,7 +278,7 @@ export default function CristinaPage() {
             </p>
             <div className="w-12 h-[1px] bg-[#8E8781]/40 mx-auto mt-4"></div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:flex md:flex-wrap md:justify-center gap-8 pt-6 max-w-6xl mx-auto">
             {servicos.map((item, i) => (
               <div

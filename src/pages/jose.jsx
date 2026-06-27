@@ -1,5 +1,5 @@
-import hero from "../assets/hero-jose.png";
-import heroMobile from "../assets/hero-mobile-jose.png";
+import hero from "../assets/jose-hero.png";
+import heroMobile from "../assets/hero-mobile-jose.jpeg";
 import { useState, useEffect } from "react";
 
 export default function JosePage() {
@@ -86,15 +86,14 @@ export default function JosePage() {
     <>
       // Hero
       <section
-        className="w-full min-h-screen xl:h-screen relative flex items-center bg-cover bg-fixed bg-center bg-no-repeat overflow-hidden transition-all duration-1000"
+        className="w-full min-h-screen xl:h-screen relative flex items-center bg-cover bg-fixed bg-center bg-no-repeat overflow-hidden animate-fade-in"
         style={{
           backgroundImage: `url(${isMobile ? heroMobile : hero})`,
           borderBottomLeftRadius: "40% 8%",
           borderBottomRightRadius: "50% 8%",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent z-10 animate-pulse-slow"></div>
-        
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent z-10"></div>
         <div className="relative z-20 w-full px-4 sm:px-10 md:px-20 lg:px-24 xl:px-29 pt-28 pb-12 xl:py-0 flex flex-col justify-center">
           <div className="max-w-full md:max-w-3/4 lg:w-11/12 xl:w-2/3 space-y-6 md:space-y-8">
             <span className="font-cinzel tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-xs uppercase text-brand-light/90 block animate-fade-in-down lg:pt-4">
@@ -130,18 +129,22 @@ export default function JosePage() {
         <style
           dangerouslySetInnerHTML={{
             __html: `
-            @keyframes fadeInDown {
-              from { opacity: 0; transform: translateY(-20px); }
-              to { opacity: 1; transform: translateY(0); }
-            }
-            @keyframes fadeInUp {
-              from { opacity: 0; transform: translateY(30px); }
-              to { opacity: 1; transform: translateY(0); }
-            }
-            .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
-            .animate-fade-in-up { opacity: 0; animation: fadeInUp 1s ease-out forwards; }
-            .animate-pulse-slow { animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-          `,
+              @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+              }
+              @keyframes fadeInDown {
+                from { opacity: 0; transform: translateY(-20px); }
+                to { opacity: 1; transform: translateY(0); }
+              }
+              @keyframes fadeInUp {
+                from { opacity: 0; transform: translateY(30px); }
+                to { opacity: 1; transform: translateY(0); }
+              }
+              .animate-fade-in { animation: fadeIn 1.5s ease-out forwards; }
+              .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+              .animate-fade-in-up { opacity: 0; animation: fadeInUp 1s ease-out forwards; }
+            `,
           }}
         />
       </section>

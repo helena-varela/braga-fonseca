@@ -91,12 +91,14 @@ export default function Home() {
               Advocacia Estratégica & Humanizada
             </span>
 
-            <h1 className="font-cinzel text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-7xl leading-tight md:leading-[1.15] xl:leading-[1.1] text-brand-light animate-fade-in-up">
-              {data.dor}
+            <h1 className="font-cinzel text-4xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-7xl leading-tight md:leading-[1.15] xl:leading-[1.1] text-brand-light animate-fade-in-up">
+              Estratégia e excelência na defesa dos seus direitos.
             </h1>
 
             <p className="font-inter text-base md:text-lg lg:text-xl xl:text-2xl text-brand-light/90 max-w-xl lg:max-w-2xl leading-relaxed animate-fade-in-up [animation-delay:200ms]">
-              {data.subDor}
+              Atuação especializada em Direito Administrativo, Previdenciário e
+              do Trabalho. Unimos rigor técnico e atendimento humanizado para
+              resguardar servidores públicos, cidadãos e empresas.
             </p>
 
             <div className="flex pt-4 md:pt-6 animate-fade-in-up [animation-delay:400ms]">
@@ -108,7 +110,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <span className="relative z-10 group-hover:tracking-[0.4em] transition-all duration-500">
-                    FALAR COM UMA ESPECIALISTA
+                    FALE COM UM ADVOGADO
                   </span>
                 </a>
               </button>
@@ -150,15 +152,15 @@ export default function Home() {
               {
                 num: "01",
                 t: "Missão",
-                h: "Direitos que você já possui",
-                d: "Nossa atuação ética e personalizada tem como foco principal ajudar nossos clientes a conhecerem e exercerem os direitos que lhes são garantidos por lei.",
+                h: "Defesa e Prerrogativas Fundamentais",
+                d: "Nossa atuação ética e personalizada tem como foco principal garantir que cidadãos, servidores e empresas exerçam com plenitude os direitos e garantias que lhes são assegurados por lei.",
                 bg: "bg-[#cbccba]",
               },
               {
                 num: "02",
                 t: "Experiência",
                 h: "Foco em Resultados",
-                d: "Unimos a expertise técnica na defesa de servidores públicos com a sensibilidade necessária para garantir benefícios previdenciários e assistenciais.",
+                d: "Unimos rigor técnico e visão multidisciplinar na entrega de soluções estratégicas em Direito do Trabalho, Administrativo e Previdenciário, focados na mitigação de riscos e na máxima segurança jurídica.",
                 bg: "bg-[#8E8781]",
                 dark: true,
               },
@@ -166,7 +168,7 @@ export default function Home() {
                 num: "03",
                 t: "Presença",
                 h: "Natal & Região",
-                d: "Estrutura pronta para atendimento presencial na capital e suporte digital estratégico para todo o estado.",
+                d: "Estrutura pronta para atendimento presencial na capital e suporte digital estratégico, ágil e seguro para clientes e corporações em todo o estado do Rio Grande do Norte.",
                 bg: "bg-[#cbccba]",
               },
             ].map((item, i) => (
@@ -222,7 +224,7 @@ export default function Home() {
               Excelência e Humanidade
             </h2>
             <h3 className="font-cinzel text-3xl md:text-5xl text-[#8E8781] leading-tight">
-              Conheça as Especialistas
+              Conheça os Especialistas
             </h3>
             <p className="font-inter text-gray-600 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
               Com atuação ética, personalizada e estratégica, o escritório Braga
@@ -298,7 +300,7 @@ export default function Home() {
                   Kelly Fonsêca
                 </h4>
                 <p className="font-inter text-xs text-gray-400 uppercase tracking-[0.3em] mb-6 pb-4 border-b border-[#8E8781]/10 w-3/4">
-                  Especialista em INSS
+                  Direito Previdenciário
                 </p>
                 <div className="min-h-[120px] flex items-center justify-center mb-8">
                   <p className="font-inter text-sm md:text-base text-gray-600 leading-relaxed px-4">
@@ -343,12 +345,12 @@ export default function Home() {
                   José Anderson Souza de Salles
                 </h4>
                 <p className="font-inter text-xs text-gray-400 uppercase tracking-[0.3em] mb-6 pb-4 border-b border-[#8E8781]/10 w-3/4">
-                  Especialista em Direito do Trabalho
+                  Direito do Trabalho
                 </p>
-                <div className="min-h-[120px] flex items-center justify-center mb-3">
+                <div className="min-h-[120px] flex items-center justify-center mb-8">
                   <p className="font-inter text-sm md:text-base text-gray-600 leading-relaxed px-4">
-                    Dr. José Anderson Souza de Salles é especialista em direito do
-                    trabalho, focado na orientação segura de trabalhadores e
+                    Dr. José Anderson Souza de Salles é especialista em direito
+                    do trabalho, focado na orientação segura de trabalhadores e
                     empresas.
                   </p>
                 </div>
